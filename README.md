@@ -1,6 +1,5 @@
 # tacniqueassignment
 
-# Task_management_api
 Task Management API
 This is a RESTful API for managing tasks. Users can create, retrieve, update, and delete tasks. It also includes optional features like authentication and rate limiting.
 
