@@ -39,7 +39,7 @@ secret_key=your secret key<br/>
 
 npm run server <br/>
 
-The API will be accessible at http://localhost:PORT by default.
+The API will be accessible at http://localhost:3000 by default.
 ## Task Structure
 Each task should have the following properties:<br/>
 ID<br/>
@@ -79,7 +79,7 @@ To use authentication, you must register and log in to manage tasks. Protected e
 | `/tasks`       | GET    | Get all tasks                    | -                                                                                        | List of tasks                         |
 | `/tasks/:id`   | GET    | Get a specific task by ID        | -                                                                                        | Task details                         |
 | `/tasks/:id`   | PUT    | Update a specific task by ID     | `{ "title": "Updated Task Title", "description": "Updated Task Description", "status": "completed" }` | task updated!         |
-| `/tasks/:id`   | DELETE | Delete a specific task by ID     | -                                                                                        | `{ "message": "Task deleted!" }` |
+| `/tasks/:id`   | DELETE | Delete a specific task by ID     | -                                                                                        | `{ "message": "task deleted!" }` |
 
 ---
 

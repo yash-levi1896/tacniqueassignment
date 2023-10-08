@@ -5,12 +5,13 @@ const { userRouter } = require('./router/user.route');
 const taskRouter = require('./router/task.route');
 const fs=require('fs');
 const path=require('path');
-const morgan=require('morgan')
+const morgan=require('morgan');
+require('dotenv').config();
 const { authentication } = require('./middleware/auth.middleware');
 
 var accessLogStream = fs.createWriteStream(path.join(__dirname, './access.log'), { flags: 'a' })
 
-
+PORT=process.env.PORT ||3000
 
 app=express()
 
@@ -30,7 +31,7 @@ app.use("/tasks",taskRouter)
 
 
 
-app.listen(process.env.PORT,async()=>{
+app.listen(PORT,async()=>{
     try {
         await connection
         console.log("connected to db")
