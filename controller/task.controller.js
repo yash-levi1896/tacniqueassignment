@@ -63,11 +63,11 @@ async function GetTaskById(req,res,id){
 
 async function UpdateTask(req,res,id){
 
-    const {title , description , creationDate , status} = req.body
+    const {title , description , status} = req.body
     try {
 
         // Check if all required fields are present in the request body
-        if(title && description && creationDate && status){
+        if(title && description && status){
             // Update the task in the database using Task.findByIdAndUpdate()
             await Task.findByIdAndUpdate({_id:id},req.body)
 
