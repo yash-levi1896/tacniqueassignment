@@ -61,6 +61,28 @@ POST /register: Register a new user.<br/>
 POST /login: Authenticate and log in a user.<br/>
 ## Authentication:
 To use authentication, you must register and log in to manage tasks. Protected endpoints require authentication.
+
+# API Endpoints
+
+## User Authentication and Management
+
+| Endpoint    | Method | Description                     | Request Body                                                         | Response                          |
+|-------------|--------|---------------------------------|----------------------------------------------------------------------|------------------------------------|
+| `/register` | POST   | Register a new user             | {"email": "example@example.com", "password": "password123" }` | `{ "msg": "User registered" }` |
+| `/login`    | POST   | User login                     | `{ "email": "example@example.com", "password": "password123" }`       | `{ "msg": "sucessfull login" }`    
+
+## Task Management
+
+| Endpoint       | Method | Description                      | Request Body                                                                             | Response                              |
+|-----------------|--------|----------------------------------|------------------------------------------------------------------------------------------|----------------------------------------|
+| `/tasks`       | POST   | Add a new task                   | `{ "title": "Task Title", "description": "Task Description" }`       | `{ "message": "Task added" }` |
+| `/tasks`       | GET    | Get all tasks                    | -                                                                                        | List of tasks                         |
+| `/tasks/:id`   | GET    | Get a specific task by ID        | -                                                                                        | Task details                         |
+| `/tasks/:id`   | PUT    | Update a specific task by ID     | `{ "title": "Updated Task Title", "description": "Updated Task Description", "status": "completed" }` | Updated task details         |
+| `/tasks/:id`   | DELETE | Delete a specific task by ID     | -                                                                                        | `{ "message": "Task deleted!" }` |
+
+---
+
 ## Error Handling
 Appropriate HTTP status codes and error messages will be returned in case of errors.
 ## Logging 
