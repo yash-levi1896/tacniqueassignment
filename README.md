@@ -76,8 +76,8 @@ To use authentication, you must register and log in to manage tasks. Protected e
 | Endpoint       | Method | Description                      | Request Body                                                                             | Response                              |
 |-----------------|--------|----------------------------------|------------------------------------------------------------------------------------------|----------------------------------------|
 | `/tasks`       | POST   | Add a new task                   | `{ "title": "Task Title", "description": "Task Description" }`       | `{ "msg": "Task added" }` |
-| `/tasks`       | GET    | Get all tasks                    | -                                                                                        | List of tasks                         |
-| `/tasks/:id`   | GET    | Get a specific task by ID        | -                                                                                        | Task details                         |
+| `/tasks`       | GET    | Get all tasks                    | -                                                                                        | {"msg":List of tasks}                         |
+| `/tasks/:id`   | GET    | Get a specific task by ID        | -                                                                                        | {"msg":Task details}                        |
 | `/tasks/:id`   | PUT    | Update a specific task by ID     | `{ "title": "Updated Task Title", "description": "Updated Task Description", "status": "completed" }` | {"msg":task updated!}         |
 | `/tasks/:id`   | DELETE | Delete a specific task by ID     | -                                                                                        | `{ "msg": "task deleted!" }` |
 
